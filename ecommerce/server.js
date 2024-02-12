@@ -114,6 +114,16 @@ app.get("/signup", function(req, res){
     }
 })
 
+//app.get("/contact_us", function(req, res){
+   // if(req.session.username){
+    //    res.redirect("/contact_us");
+   // }
+    
+//})
+app.get("/contact_us", function(req, res){
+    res.render("contact_us", {username : req.session.username});
+})
+
 
 app.get("/cart", function(req, res){
     if(req.session.username){
